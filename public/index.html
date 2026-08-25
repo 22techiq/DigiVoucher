@@ -1453,7 +1453,150 @@ a:hover {
 /* ===========================
    CoreLynk Retrieve Modal styling below
 =========================== */
+/* =========================================
+   CoreLynk Retrieve Credentials Modal Style
+========================================= */
 
+#retrieveModal{
+    backdrop-filter:blur(8px);
+    animation:fadeIn .25s ease;
+}
+
+#retrieveModal .box{
+    position:relative;
+    background:#0b1827;
+    border:1px solid #2f4b67;
+    border-radius:24px;
+    padding:28px;
+    box-shadow:0 25px 50px rgba(0,0,0,.45);
+    overflow:hidden;
+    animation:slideUp .3s ease;
+}
+
+#retrieveModal .box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at top,#00d08418,transparent 55%);
+    pointer-events:none;
+}
+
+#retrieveModal h2{
+    text-align:center;
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:20px;
+    color:white;
+}
+
+#retrieveModal label{
+    display:block;
+    color:#c6d2df;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+#retrieveModal .input{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border:1px solid #38516d;
+    background:#152434;
+    color:white;
+    font-size:16px;
+    transition:.25s;
+}
+
+#retrieveModal .input::placeholder{
+    color:#8ea2b6;
+}
+
+#retrieveModal .input:focus{
+    outline:none;
+    border-color:#00d084;
+    box-shadow:0 0 0 3px rgba(0,208,132,.15);
+}
+
+/* OTP field */
+#otpCode{
+    text-align:center;
+    font-size:28px;
+    letter-spacing:8px;
+    font-weight:700;
+}
+
+/* Button */
+#retrieveModal .pay{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#00d084;
+    color:#06111d;
+    font-size:16px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow:0 8px 25px rgba(0,208,132,.25);
+}
+
+#retrieveModal .pay:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(0,208,132,.35);
+}
+
+/* Error box */
+#retrieveModal .error{
+    display:none;
+    margin-bottom:16px;
+    padding:12px;
+    border-radius:12px;
+    background:rgba(255,77,77,.12);
+    border:1px solid rgba(255,77,77,.35);
+    color:#ffd3d3;
+    font-size:14px;
+}
+
+#retrieveModal .error.active{
+    display:block;
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    #retrieveModal .box{
+        padding:22px;
+        border-radius:20px;
+    }
+
+    #retrieveModal h2{
+        font-size:22px;
+    }
+
+    #otpCode{
+        font-size:24px;
+        letter-spacing:6px;
+    }
+}
 
 </style>
 
