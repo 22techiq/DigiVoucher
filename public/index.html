@@ -1630,6 +1630,11 @@ Wifi credential retrieval modal
       <button class="pay" onclick="verifyOTP()">
         Verify
       </button>
+/*Cancell button for Wifi Credentials retrieval*/
+      <button class="retrieve-cancel" onclick="closeRetrieve()">
+      Cancel
+      </button>
+/*End of Cancell button for Wifi Credentials retrieval*/
     </div>
 
   </div>
@@ -3782,6 +3787,44 @@ async function verifyOTP(){
   document.getElementById("password").textContent=data.password;
 
 }    
+</script>
+
+      
+<!--Retrieve Wifi credentials modal-->
+<script>
+/* Close Retrieve Modal */
+
+function closeRetrieve(){
+
+  document.getElementById("retrieveModal").classList.remove("active");
+
+  document.getElementById("phoneStep").style.display="block";
+  document.getElementById("otpStep").style.display="none";
+
+  document.getElementById("retrievePhone").value="";
+  document.getElementById("otpCode").value="";
+
+  document.getElementById("retrieveError").classList.remove("active");
+
+}
+
+/* Close when clicking outside the modal */
+document.getElementById("retrieveModal").addEventListener("click",function(e){
+
+  if(e.target===this){
+    closeRetrieve();
+  }
+
+});
+
+/* Close when ESC is pressed */
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape"){
+    closeRetrieve();
+  }
+
+});
 </script>
 </body>
 </html>
