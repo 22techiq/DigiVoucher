@@ -1455,8 +1455,39 @@ a:hover {
 
 
 <body>
+<!-- =========================================================
+Wifi credential retrieval modal
+========================================================= -->
+<div class="modal" id="retrieveModal">
+  <div class="box">
+
+    <div id="phoneStep">
+      <h2>Retrieve WiFi Credentials</h2>
+      <div id="retrieveError" class="error"></div>
+
+      <label>M-Pesa Number</label>
+      <input id="retrievePhone" class="input" placeholder="0712345678">
+
+      <button class="pay" onclick="requestOTP()">
+        Send OTP
+      </button>
+    </div>
+
+    <div id="otpStep" style="display:none;">
+      <h2>Enter OTP</h2>
+
+      <input id="otpCode" class="input" maxlength="6" placeholder="123456">
+
+      <button class="pay" onclick="verifyOTP()">
+        Verify
+      </button>
+    </div>
+
+  </div>
+</div>
 
 
+      
 <!-- =========================================================
      HEADER
 ========================================================= -->
@@ -1865,7 +1896,15 @@ a:hover {
           
     </div>
 
+<!-- =====================================================
+        Retrieval Button
+    ====================================================== -->
+<button class="buy" onclick="openRetrieve()" style="max-width:340px;margin:40px auto;display:block;">
+  <i class="fa-solid fa-key"></i> Retrieve My WiFi Credentials
+</button>
 
+
+      
 
     <!-- =====================================================
          HOW IT WORKS
@@ -3513,6 +3552,82 @@ document.onmousedown = function (e) {
   if (e.button === 2) return false;
 };
 </script>
+/* =================================
+   script for OTP function
+================================= */    
+<script>
+  let retrievalPhone="";
 
+function openRetrieve(){
+  document.getElementById("retrieveModal").classList.add("active");
+}
+
+async function requestOTP(){
+
+  const phone=normalize(document.getElementById("retrievePhone").value);
+
+  retrievalPhone=phone;
+
+  const response=await fetch(API_URL,{
+    method:"POST",
+    headers:{
+      "Content-Type":"text/plain;charset=utf-8"
+    },
+    body:JSON.stringify({
+      action:"requestOTP",
+      phone
+    })
+  });
+
+  const data=await response.json();
+
+  if(data.success){
+
+    document.getElementById("phoneStep").style.display="none";
+    document.getElementById("otpStep").style.display="block";
+
+  }else{
+
+    document.getElementById("retrieveError").textContent=data.message;
+    document.getElementById("retrieveError").classList.add("active");
+
+  }
+
+}
+
+async function verifyOTP(){
+
+  const response=await fetch(API_URL,{
+    method:"POST",
+    headers:{
+      "Content-Type":"text/plain;charset=utf-8"
+    },
+    body:JSON.stringify({
+      action:"verifyOTP",
+      phone:retrievalPhone,
+      otp:document.getElementById("otpCode").value
+    })
+  });
+
+  const data=await response.json();
+
+  if(!data.success){
+    alert(data.message);
+    return;
+  }
+
+  document.getElementById("retrieveModal").classList.remove("active");
+
+  document.getElementById("modal").classList.add("active");
+
+  document.getElementById("paymentForm").style.display="none";
+  document.getElementById("status").classList.remove("active");
+  document.getElementById("success").classList.add("active");
+
+  document.getElementById("username").textContent=data.username;
+  document.getElementById("password").textContent=data.password;
+
+}    
+</script>
 </body>
 </html>
