@@ -1,0 +1,3830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<!-- Prevent iframe embedding -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+
+<meta name="theme-color"
+      content="#07111f">
+
+<meta name="description"
+      content="CoreLynk WiFi Hotspot - Buy affordable WiFi packages instantly and receive your WiFi access credentials after M-Pesa payment.">
+
+<title>CoreLynk WiFi | Buy WiFi</title>
+
+
+<!-- =========================================================
+     GOOGLE FONT
+========================================================= -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+<!-- =========================================================
+     FONT AWESOME
+========================================================= -->
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    min-height:100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(0,200,150,.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(0,120,255,.12),
+            transparent 35%
+        ),
+        #07111f;
+
+    color:#fff;
+
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+
+    --primary:#00d084;
+
+    --primary-dark:#00a96b;
+
+    --blue:#1683ff;
+
+    --dark:#07111f;
+
+    --card:rgba(255,255,255,.07);
+
+    --border:rgba(255,255,255,.12);
+
+    --muted:#9daaba;
+
+    --danger:#ff5d6c;
+
+    --warning:#ffbd45;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(18px);
+
+    background:
+        rgba(7,17,31,.82);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+
+}
+
+
+.navbar{
+
+    width:min(1150px,92%);
+
+    margin:auto;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:21px;
+
+    font-weight:800;
+
+}
+
+
+.logo-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:13px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #00a8ff
+        );
+
+    color:#fff;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,208,132,.25);
+
+}
+
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+
+.support-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        var(--border);
+
+    padding:10px 15px;
+
+    border-radius:12px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+.support-btn:hover{
+
+    background:
+        rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    width:min(1150px,92%);
+
+    margin:55px auto 30px;
+
+    text-align:center;
+
+}
+
+
+.live-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    background:
+        rgba(0,208,132,.10);
+
+    border:
+        1px solid
+        rgba(0,208,132,.25);
+
+    color:#63e8b2;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+
+.live-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:
+        0 0 10px
+        var(--primary);
+
+}
+
+
+.hero h1{
+
+    font-size:
+        clamp(34px,6vw,64px);
+
+    line-height:1.04;
+
+    letter-spacing:-2.5px;
+
+    margin-bottom:18px;
+
+}
+
+
+.hero h1 span{
+
+    background:
+        linear-gradient(
+            90deg,
+            #00d084,
+            #20a9ff
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+
+    width:min(1150px,92%);
+
+    margin:auto;
+
+    padding-bottom:70px;
+
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    margin:45px 0 20px;
+
+}
+
+
+.section-heading h2{
+
+    font-size:23px;
+
+}
+
+
+.section-heading p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    margin-top:5px;
+
+}
+
+
+/* =========================================================
+   PACKAGE GRID
+========================================================= */
+
+.packages{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:18px;
+
+}
+
+
+/* =========================================================
+   PACKAGE CARD
+========================================================= */
+
+.package-card{
+
+    position:relative;
+
+    padding:24px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.095),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    transition:
+        .25s ease;
+
+    overflow:hidden;
+
+}
+
+
+.package-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    background:
+        rgba(0,208,132,.10);
+
+    filter:blur(30px);
+
+    top:-70px;
+
+    right:-50px;
+
+}
+
+
+.package-card:hover{
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(0,208,132,.35);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.25);
+
+}
+
+
+.package-icon{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:
+        rgba(0,208,132,.12);
+
+    color:
+        var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+
+.package-card h3{
+
+    font-size:19px;
+
+    margin-bottom:8px;
+
+}
+
+
+.package-card .description{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    min-height:38px;
+
+}
+
+
+.price{
+
+    margin:20px 0;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+
+.price small{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    font-weight:500;
+
+}
+
+
+.buy-btn{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:13px;
+
+    border-radius:13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #00b7a1
+        );
+
+    color:#02150e;
+
+    font-weight:800;
+
+    font-size:14px;
+
+    transition:.2s;
+
+}
+
+
+.buy-btn:hover{
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,208,132,.25);
+
+}
+
+
+.buy-btn:active{
+
+    transform:
+        scale(.98);
+
+}
+
+
+.buy-btn:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.steps{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(190px,1fr)
+        );
+
+    gap:15px;
+
+}
+
+
+.step{
+
+    padding:20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        rgba(255,255,255,.045);
+
+    border-radius:18px;
+
+}
+
+
+.step-number{
+
+    width:35px;
+
+    height:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:10px;
+
+    background:
+        rgba(0,208,132,.12);
+
+    color:var(--primary);
+
+    font-weight:800;
+
+    margin-bottom:14px;
+
+}
+
+
+.step h3{
+
+    font-size:15px;
+
+    margin-bottom:7px;
+
+}
+
+
+.step p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   PAYMENT MODAL
+========================================================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(0,0,0,.72);
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+.modal.active{
+
+    display:flex;
+
+}
+
+
+.modal-box{
+
+    width:
+        min(440px,100%);
+
+    background:
+        #0c1929;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:25px;
+
+    padding:28px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.55);
+
+    animation:
+        modalIn .25s ease;
+
+}
+
+
+@keyframes modalIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+.modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:start;
+
+    margin-bottom:24px;
+
+}
+
+
+.modal-header h2{
+
+    font-size:21px;
+
+}
+
+
+.close-btn{
+
+    border:none;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:
+        rgba(255,255,255,.07);
+
+    color:#fff;
+
+}
+
+
+.close-btn:hover{
+
+    background:
+        rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================================
+   SELECTED PACKAGE
+========================================================= */
+
+.selected-package{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    margin-bottom:20px;
+
+}
+
+
+.selected-package span{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+}
+
+
+.selected-package strong{
+
+    font-size:18px;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+.input-wrapper{
+
+    position:relative;
+
+}
+
+
+.input-wrapper i{
+
+    position:absolute;
+
+    left:14px;
+
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    color:var(--muted);
+
+}
+
+
+.input-wrapper input{
+
+    width:100%;
+
+    padding:14px 15px 14px 43px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:13px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    color:#fff;
+
+    outline:none;
+
+    font-family:inherit;
+
+}
+
+
+.input-wrapper input:focus{
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0,208,132,.08);
+
+}
+
+
+.help-text{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    margin-top:7px;
+
+}
+
+
+/* =========================================================
+   PAYMENT BUTTON
+========================================================= */
+
+.pay-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    color:#03140e;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #00b8a8
+        );
+
+}
+
+
+.pay-btn:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+
+/* =========================================================
+   PAYMENT STATUS
+========================================================= */
+
+.status-box{
+
+    display:none;
+
+    text-align:center;
+
+    padding:15px 0 5px;
+
+}
+
+
+.status-box.active{
+
+    display:block;
+
+}
+
+
+.spinner{
+
+    width:50px;
+
+    height:50px;
+
+    margin:5px auto 20px;
+
+    border:
+        4px solid
+        rgba(255,255,255,.12);
+
+    border-top-color:
+        var(--primary);
+
+    border-radius:50%;
+
+    animation:
+        spin .8s linear infinite;
+
+}
+
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+.status-box h3{
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+}
+
+
+.status-box p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.success-box{
+
+    display:none;
+
+    text-align:center;
+
+}
+
+
+.success-box.active{
+
+    display:block;
+
+}
+
+
+.success-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 17px;
+
+    background:
+        rgba(0,208,132,.12);
+
+    color:var(--primary);
+
+    font-size:28px;
+
+}
+
+
+.success-box h2{
+
+    margin-bottom:8px;
+
+}
+
+
+.success-box > p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   CREDENTIALS
+========================================================= */
+
+.credentials{
+
+    margin-top:22px;
+
+    display:grid;
+
+    gap:10px;
+
+}
+
+
+.credential{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        var(--border);
+
+    text-align:left;
+
+}
+
+
+.credential-info{
+
+    min-width:0;
+
+}
+
+
+.credential-label{
+
+    display:block;
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    margin-bottom:5px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+
+}
+
+
+.credential-value{
+
+    font-size:16px;
+
+    font-weight:800;
+
+    word-break:break-all;
+
+}
+
+
+.copy-btn{
+
+    flex-shrink:0;
+
+    border:none;
+
+    width:37px;
+
+    height:37px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:
+        rgba(0,208,132,.1);
+
+    color:var(--primary);
+
+}
+
+
+.copy-btn:hover{
+
+    background:
+        rgba(0,208,132,.18);
+
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-box{
+
+    display:none;
+
+    margin-top:15px;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,93,108,.08);
+
+    border:
+        1px solid
+        rgba(255,93,108,.2);
+
+    color:#ff9aa4;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+}
+
+
+.error-box.active{
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   SUPPORT
+========================================================= */
+
+.support-card{
+
+    margin-top:25px;
+
+    padding:18px;
+
+    text-align:center;
+
+    border-radius:16px;
+
+    background:
+        rgba(255,255,255,.04);
+
+}
+
+
+.support-card p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    margin-bottom:10px;
+
+}
+
+
+.whatsapp{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.07);
+
+    padding:25px 20px;
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+}
+
+
+footer strong{
+
+    color:#fff;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .navbar{
+
+        height:64px;
+
+    }
+
+
+    .logo{
+
+        font-size:18px;
+
+    }
+
+
+    .logo-icon{
+
+        width:37px;
+
+        height:37px;
+
+    }
+
+
+    .support-btn span{
+
+        display:none;
+
+    }
+
+
+    .hero{
+
+        margin-top:38px;
+
+    }
+
+
+    .hero h1{
+
+        letter-spacing:-1.5px;
+
+    }
+
+
+    .packages{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .modal-box{
+
+        padding:22px;
+
+        border-radius:21px;
+
+    }
+
+}
+
+
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background: #007bff;
+}
+
+
+/* ===========================
+   CoreLynk Retrieve Modal styling below
+=========================== */
+/* =========================================
+   CoreLynk Retrieve Credentials Modal Style
+========================================= */
+
+#retrieveModal{
+    backdrop-filter:blur(8px);
+    animation:fadeIn .25s ease;
+}
+
+#retrieveModal .box{
+    position:relative;
+    background:#0b1827;
+    border:1px solid #2f4b67;
+    border-radius:24px;
+    padding:28px;
+    box-shadow:0 25px 50px rgba(0,0,0,.45);
+    overflow:hidden;
+    animation:slideUp .3s ease;
+}
+
+#retrieveModal .box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at top,#00d08418,transparent 55%);
+    pointer-events:none;
+}
+
+#retrieveModal h2{
+    text-align:center;
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:20px;
+    color:white;
+}
+
+#retrieveModal label{
+    display:block;
+    color:#c6d2df;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+#retrieveModal .input{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border:1px solid #38516d;
+    background:#152434;
+    color:white;
+    font-size:16px;
+    transition:.25s;
+}
+
+#retrieveModal .input::placeholder{
+    color:#8ea2b6;
+}
+
+#retrieveModal .input:focus{
+    outline:none;
+    border-color:#00d084;
+    box-shadow:0 0 0 3px rgba(0,208,132,.15);
+}
+
+/* OTP field */
+#otpCode{
+    text-align:center;
+    font-size:28px;
+    letter-spacing:8px;
+    font-weight:700;
+}
+
+/* Button */
+#retrieveModal .pay{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#00d084;
+    color:#06111d;
+    font-size:16px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow:0 8px 25px rgba(0,208,132,.25);
+}
+
+#retrieveModal .pay:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(0,208,132,.35);
+}
+
+/* Error box */
+#retrieveModal .error{
+    display:none;
+    margin-bottom:16px;
+    padding:12px;
+    border-radius:12px;
+    background:rgba(255,77,77,.12);
+    border:1px solid rgba(255,77,77,.35);
+    color:#ffd3d3;
+    font-size:14px;
+}
+
+#retrieveModal .error.active{
+    display:block;
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    #retrieveModal .box{
+        padding:22px;
+        border-radius:20px;
+    }
+
+    #retrieveModal h2{
+        font-size:22px;
+    }
+
+    #otpCode{
+        font-size:24px;
+        letter-spacing:6px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+<!-- =========================================================
+Wifi credential retrieval modal
+========================================================= -->
+<div class="modal" id="retrieveModal">
+  <div class="box">
+
+    <div id="phoneStep">
+      <h2>Retrieve WiFi Credentials</h2>
+      <div id="retrieveError" class="error"></div>
+
+      <label>M-Pesa Number</label>
+      <input id="retrievePhone" class="input" placeholder="0712345678">
+
+      <button class="pay" onclick="requestOTP()">
+        Send OTP
+      </button>
+    </div>
+
+    <div id="otpStep" style="display:none;">
+      <h2>Enter OTP</h2>
+
+      <input id="otpCode" class="input" maxlength="6" placeholder="123456">
+
+      <button class="pay" onclick="verifyOTP()">
+        Verify
+      </button>
+/*Cancell button for Wifi Credentials retrieval*/
+      <button class="retrieve-cancel" onclick="closeRetrieve()">
+      Cancel
+      </button>
+/*End of Cancell button for Wifi Credentials retrieval*/
+    </div>
+
+  </div>
+</div>
+
+
+      
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<div class="navbar">
+
+
+    <a href="https://22persona.vercel.app"
+       class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-wifi"></i>
+
+        </div>
+
+        Core<span>Lynk</span>
+
+    </a>
+
+
+
+
+
+    <!-- =====================================================
+        Retrieval Button
+    ====================================================== -->
+<button class="buy" onclick="openRetrieve()" style="max-width:340px;margin:40px auto;display:block;">
+  <i class="fa-solid fa-key"></i> My WiFi Credentials
+</button>
+
+
+
+
+      
+    <a href="tel:+254751828300"
+       class="support-btn">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <span>Support</span>
+
+    </a>
+
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+
+    <div class="live-badge">
+
+        <span class="live-dot"></span>
+
+        CoreLynk WiFi is available
+
+    </div>
+
+
+    <h1>
+
+        Fast WiFi.
+
+        <br>
+
+        <span>Simple & Affordable.</span>
+
+    </h1>
+
+
+    <p>
+
+        Choose your preferred package,
+        pay securely using M-Pesa and
+        receive your WiFi access credentials
+        instantly after payment confirmation.
+
+    </p>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+    <!-- =====================================================
+         PACKAGES
+    ====================================================== -->
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Choose your package
+            </h2>
+
+            <p>
+                Affordable internet access for everyone.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="packages">
+
+ <!-- 30 minutes -->
+
+        <article class="package-card">
+
+            <div class="package-icon">
+
+                <i class="fa-regular fa-book"></i>
+
+            </div>
+
+
+            <h3>
+                30 minutes
+            </h3>
+
+
+            <p class="description">
+
+                Perfect for quick browsing,
+                messaging and social media.
+
+            </p>
+
+
+            <div class="price">
+
+                KSh 10
+
+                <small>
+                    / hour
+                </small>
+
+            </div>
+
+
+            <button
+                class="buy-btn"
+                onclick="openPayment('30 min',10)">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Buy Now
+
+            </button>
+
+        </article>
+
+
+
+
+
+          
+        <!-- 1 HOUR -->
+
+        <article class="package-card">
+
+            <div class="package-icon">
+
+                <i class="fa-regular fa-clock"></i>
+
+            </div>
+
+
+            <h3>
+                1 Hour
+            </h3>
+
+
+            <p class="description">
+
+                Perfect for quick browsing,
+                messaging and social media.
+
+            </p>
+
+
+            <div class="price">
+
+                KSh 20
+
+                <small>
+                    / hour
+                </small>
+
+            </div>
+
+
+            <button
+                class="buy-btn"
+                onclick="openPayment('1 Hour',20)">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Buy Now
+
+            </button>
+
+        </article>
+
+
+
+        <!-- 6 HOURS -->
+
+        <article class="package-card">
+
+            <div class="package-icon">
+
+                <i class="fa-solid fa-sun"></i>
+
+            </div>
+
+
+            <h3>
+                6 Hours
+            </h3>
+
+
+            <p class="description">
+
+                Great for study, work,
+                entertainment and browsing.
+
+            </p>
+
+
+            <div class="price">
+
+                KSh 50
+
+                <small>
+                    / 6 hours
+                </small>
+
+            </div>
+
+
+            <button
+                class="buy-btn"
+                onclick="openPayment('6 Hours',50)">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Buy Now
+
+            </button>
+
+        </article>
+
+
+
+        <!-- 1 DAY -->
+
+        <article class="package-card">
+
+            <div class="package-icon">
+
+                <i class="fa-solid fa-calendar-day"></i>
+
+            </div>
+
+
+            <h3>
+                1 Day
+            </h3>
+
+
+            <p class="description">
+
+                Stay connected throughout
+                the day without interruptions.
+
+            </p>
+
+
+            <div class="price">
+
+                KSh 99
+
+                <small>
+                    / day
+                </small>
+
+            </div>
+
+
+            <button
+                class="buy-btn"
+                onclick="openPayment('1 Day',99)">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Buy Now
+
+            </button>
+
+        </article>
+
+
+
+        <!-- 7 DAYS -->
+
+        <article class="package-card">
+
+            <div class="package-icon">
+
+                <i class="fa-solid fa-calendar-week"></i>
+
+            </div>
+
+
+            <h3>
+                7 Days
+            </h3>
+
+
+            <p class="description">
+
+                Best value for regular
+                internet users.
+
+            </p>
+
+
+            <div class="price">
+
+                KSh 350
+
+                <small>
+                    / 7 days
+                </small>
+
+            </div>
+
+
+            <button
+                class="buy-btn"
+                onclick="openPayment('7 Days',350)">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Buy Now
+
+            </button>
+
+        </article>
+
+
+        <!-- 1 Month -->
+
+        <article class="package-card">
+
+            <div class="package-icon">
+
+                <i class="fa-solid fa-calendar-day"></i>
+
+            </div>
+
+
+            <h3>
+                1 Month
+            </h3>
+
+
+            <p class="description">
+
+                Stay connected throughout
+                the whole month without interruptions.
+
+            </p>
+
+
+            <div class="price">
+
+                KSh 599
+
+                <small>
+                    / Month
+                </small>
+
+            </div>
+
+
+            <button
+                class="buy-btn"
+                onclick="openPayment('1 Month',599)">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Buy Now
+
+            </button>
+
+        </article>
+
+
+          
+    </div>
+
+
+
+    <!-- =====================================================
+         HOW IT WORKS
+    ====================================================== -->
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                How it works
+            </h2>
+
+            <p>
+                Get connected in three simple steps.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>
+                Choose a package
+            </h3>
+
+            <p>
+                Select the WiFi package
+                that suits your needs.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>
+                Pay with M-Pesa
+            </h3>
+
+            <p>
+                Enter your M-Pesa number
+                and complete the payment.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>
+                Get connected
+            </h3>
+
+            <p>
+                Your WiFi username and
+                password will appear automatically.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     PAYMENT MODAL
+========================================================= -->
+
+<div
+    class="modal"
+    id="paymentModal">
+
+
+    <div class="modal-box">
+
+
+        <!-- =================================================
+             PAYMENT FORM
+        ================================================== -->
+
+        <div id="paymentForm">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2>
+                        Get connected
+                    </h2>
+
+                    <p
+                        style="
+                        color:var(--muted);
+                        font-size:12px;
+                        margin-top:5px;
+                        ">
+
+                        Complete payment using M-Pesa.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="close-btn"
+                    onclick="closePayment()">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <div class="selected-package">
+
+                <div>
+
+                    <span>
+                        Selected package
+                    </span>
+
+                    <strong id="selectedPackage">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <strong
+                        id="selectedPrice">
+
+                        KSh 0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label
+                    for="phone">
+
+                    M-Pesa phone number
+
+                </label>
+
+
+                <div class="input-wrapper">
+
+                    <i
+                        class="fa-solid fa-mobile-screen">
+
+                    </i>
+
+
+                    <input
+                        id="phone"
+                        type="tel"
+                        inputmode="numeric"
+                        maxlength="13"
+                        placeholder="0751828300"
+                        autocomplete="tel">
+
+                </div>
+
+
+                <div class="help-text">
+
+                    Enter the number that should receive
+                    the M-Pesa STK Push.
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="error-box"
+                id="errorBox">
+
+            </div>
+
+
+
+            <button
+                class="pay-btn"
+                id="payButton"
+                onclick="startPayment()">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Pay with M-Pesa
+
+            </button>
+
+
+            <div class="support-card">
+
+                <p>
+                    Need help with your payment?
+                </p>
+
+                <a
+                    class="whatsapp"
+                    href="https://wa.me/254751828300"
+                    target="_blank">
+
+                    <i
+                        class="fa-brands fa-whatsapp">
+                    </i>
+
+                    Contact CoreLynk Support
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAYMENT WAITING
+        ================================================== -->
+
+        <div
+            class="status-box"
+            id="statusBox">
+
+
+            <div class="spinner"></div>
+
+
+            <h3>
+                Waiting for payment
+            </h3>
+
+
+            <p id="statusMessage">
+
+                Check your phone and complete
+                the M-Pesa payment request.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SUCCESS
+        ================================================== -->
+
+        <div
+            class="success-box"
+            id="successBox">
+
+
+            <div class="success-icon">
+
+                <i
+                    class="fa-solid fa-check">
+                </i>
+
+            </div>
+
+
+            <h2>
+                You're connected!
+            </h2>
+
+
+            <p>
+
+                Payment confirmed successfully.
+                Use the credentials below to access
+                CoreLynk WiFi.
+
+            </p>
+
+
+
+            <div class="credentials">
+
+
+                <!-- USERNAME -->
+
+                <div class="credential">
+
+                    <div class="credential-info">
+
+                        <span class="credential-label">
+                            Access Code
+                        </span>
+
+                        <div
+                            class="credential-value"
+                            id="voucherUsername">
+
+                            —
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="copy-btn"
+                        onclick="copyCredential('voucherUsername')">
+
+                        <i
+                            class="fa-regular fa-copy">
+                        </i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="credential">
+
+                    <div class="credential-info">
+
+                        <span class="credential-label">
+                            Password
+                        </span>
+
+                        <div
+                            class="credential-value"
+                            id="voucherPassword">
+
+                            —
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="copy-btn"
+                        onclick="copyCredential('voucherPassword')">
+
+                        <i
+                            class="fa-regular fa-copy">
+                        </i>
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                class="support-card"
+                style="margin-top:20px;">
+
+                <p>
+
+                    Connect to the CoreLynk WiFi network
+                    and enter the credentials above.
+
+                </p>
+
+
+                <a
+                    class="whatsapp"
+                    href="tel:+254751823300">
+
+                    <i
+                        class="fa-solid fa-phone">
+                    </i>
+
+                    Need help? Call Support
+
+                </a>
+
+            </div>
+
+
+            <button
+                class="pay-btn"
+                style="margin-top:20px;"
+                onclick="closePayment()">
+
+                Done
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    © <span id="year"></span>
+
+    <strong>
+        CoreLynk Wifi
+    </strong>
+
+    · Fast. Simple. Connected.
+      <br>
+      Developed by <a href="https://22persona.vercel.app">McOwino</a>
+      </br>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   CORELYNK FRONTEND CONFIGURATION
+========================================================= */
+
+
+/*
+ * IMPORTANT:
+ *
+ * Replace this with the URL generated when you deploy
+ * Google Apps Script as a Web App.
+ *
+ * Example:
+ *
+ * https://script.google.com/macros/s/
+ * ABCxxxxxxxxxxxxxxxx/exec
+ */
+
+const API_URL =
+    "https://script.google.com/macros/s/AKfycbxp4F6YYl5-_2oVk9xUK4X0VNMMAo-uMTRRXLGLyiDO03Uwv8Ty8ASnRGrmiUDdcisiJA/exec";
+
+
+/*
+ * Current package selected by the customer.
+ */
+
+let selectedPackage = null;
+
+
+/*
+ * Current package price.
+ */
+
+let selectedAmount = 0;
+
+
+/*
+ * IntaSend invoice ID.
+ */
+
+let paymentReference = null;
+
+
+/*
+ * Payment polling timer.
+ */
+
+let paymentTimer = null;
+
+
+/*
+ * Number of payment checks.
+ */
+
+let paymentAttempts = 0;
+
+
+/*
+ * Maximum polling attempts.
+ *
+ * 3 seconds × 100 =
+ * approximately 5 minutes.
+ */
+
+const MAX_ATTEMPTS = 100;
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById("year")
+    .textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   OPEN PAYMENT MODAL
+========================================================= */
+
+function openPayment(
+    packageName,
+    amount
+){
+
+    selectedPackage =
+        packageName;
+
+
+    selectedAmount =
+        amount;
+
+
+    /*
+     * Update modal.
+     */
+
+    document.getElementById(
+        "selectedPackage"
+    ).textContent =
+        packageName;
+
+
+    document.getElementById(
+        "selectedPrice"
+    ).textContent =
+        "KSh " +
+        amount;
+
+
+    /*
+     * Reset interface.
+     */
+
+    resetPaymentInterface();
+
+
+    /*
+     * Show modal.
+     */
+
+    document.getElementById(
+        "paymentModal"
+    ).classList.add(
+        "active"
+    );
+
+
+    /*
+     * Focus phone field.
+     */
+
+    setTimeout(() => {
+
+        document.getElementById(
+            "phone"
+        ).focus();
+
+    },250);
+
+}
+
+
+/* =========================================================
+   CLOSE MODAL
+========================================================= */
+
+function closePayment(){
+
+    stopPolling();
+
+
+    document.getElementById(
+        "paymentModal"
+    ).classList.remove(
+        "active"
+    );
+
+}
+
+
+/* =========================================================
+   RESET PAYMENT INTERFACE
+========================================================= */
+
+function resetPaymentInterface(){
+
+    stopPolling();
+
+
+    document.getElementById(
+        "paymentForm"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "statusBox"
+    ).classList.remove(
+        "active"
+    );
+
+
+    document.getElementById(
+        "successBox"
+    ).classList.remove(
+        "active"
+    );
+
+
+    document.getElementById(
+        "errorBox"
+    ).classList.remove(
+        "active"
+    );
+
+
+    document.getElementById(
+        "errorBox"
+    ).textContent =
+        "";
+
+
+    document.getElementById(
+        "phone"
+    ).value =
+        "";
+
+
+    document.getElementById(
+        "payButton"
+    ).disabled =
+        false;
+
+
+    paymentReference =
+        null;
+
+
+    paymentAttempts =
+        0;
+
+}
+
+
+/* =========================================================
+   SHOW ERROR
+========================================================= */
+
+function showError(
+    message
+){
+
+    const box =
+        document.getElementById(
+            "errorBox"
+        );
+
+
+    box.textContent =
+        message;
+
+
+    box.classList.add(
+        "active"
+    );
+
+}
+
+
+/* =========================================================
+   HIDE ERROR
+========================================================= */
+
+function hideError(){
+
+    const box =
+        document.getElementById(
+            "errorBox"
+        );
+
+
+    box.textContent =
+        "";
+
+
+    box.classList.remove(
+        "active"
+    );
+
+}
+
+
+/* =========================================================
+   PHONE VALIDATION
+========================================================= */
+
+function normalizePhone(
+    phone
+){
+
+    /*
+     * Remove spaces.
+     */
+
+    phone =
+        phone
+            .replace(
+                /\s+/g,
+                ""
+            );
+
+
+    /*
+     * 0712345678
+     */
+
+    if(
+        /^07[0-9]{8}$/
+        .test(phone)
+    ){
+
+        return "254" +
+            phone.substring(1);
+
+    }
+
+
+    /*
+     * 0112345678
+     */
+
+    if(
+        /^01[0-9]{8}$/
+        .test(phone)
+    ){
+
+        return "254" +
+            phone.substring(1);
+
+    }
+
+
+    /*
+     * +254712345678
+     */
+
+    if(
+        /^\+254(7|1)[0-9]{8}$/
+        .test(phone)
+    ){
+
+        return phone.substring(1);
+
+    }
+
+
+    /*
+     * 254712345678
+     */
+
+    if(
+        /^254(7|1)[0-9]{8}$/
+        .test(phone)
+    ){
+
+        return phone;
+
+    }
+
+
+    return null;
+
+}
+
+
+/* =========================================================
+   START PAYMENT
+========================================================= */
+
+async function startPayment(){
+
+    hideError();
+
+
+    /*
+     * Make sure backend URL has been configured.
+     */
+
+    if(
+        API_URL.includes(
+            "YOUR_GOOGLE"
+        )
+    ){
+
+        showError(
+            "The CoreLynk payment system has not been configured yet."
+        );
+
+        return;
+
+    }
+
+
+    /*
+     * Get phone number.
+     */
+
+    const phoneInput =
+        document.getElementById(
+            "phone"
+        );
+
+
+    const phone =
+        normalizePhone(
+            phoneInput.value
+        );
+
+
+    /*
+     * Validate phone.
+     */
+
+    if(!phone){
+
+        showError(
+            "Please enter a valid Kenyan M-Pesa number, for example 0712345678."
+        );
+
+        phoneInput.focus();
+
+        return;
+
+    }
+
+
+    /*
+     * Disable button.
+     */
+
+    const button =
+        document.getElementById(
+            "payButton"
+        );
+
+
+    button.disabled =
+        true;
+
+
+    button.innerHTML =
+
+        '<i class="fa-solid fa-spinner fa-spin"></i> ' +
+        'Starting payment...';
+
+
+    try{
+
+
+        /*
+         * Send payment request to backend.
+         *
+         * IMPORTANT:
+         *
+         * We do NOT send the amount as a trusted value.
+         *
+         * Backend determines the actual package price.
+         */
+
+        const response =
+            await fetch(
+                API_URL,
+                {
+
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "text/plain;charset=utf-8"
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            action:
+                                "startPayment",
+
+                            phone:
+                                phone,
+
+                            packageName:
+                                selectedPackage
+
+                        })
+
+                }
+            );
+
+
+        /*
+         * Convert response.
+         */
+
+        const data =
+            await response.json();
+
+
+        /*
+         * Backend error.
+         */
+
+        if(!data.success){
+
+            showError(
+                data.message ||
+                "Unable to start payment."
+            );
+
+
+            button.disabled =
+                false;
+
+
+            button.innerHTML =
+
+                '<i class="fa-solid fa-lock"></i> ' +
+                'Pay with M-Pesa';
+
+
+            return;
+
+        }
+
+
+        /*
+         * Save invoice ID.
+         */
+
+        paymentReference =
+            data.reference;
+
+
+        /*
+         * Show payment waiting screen.
+         */
+
+        document.getElementById(
+            "paymentForm"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "statusBox"
+        ).classList.add(
+            "active"
+        );
+
+
+        /*
+         * Start checking payment.
+         */
+
+        paymentAttempts =
+            0;
+
+
+        paymentTimer =
+            setInterval(
+                checkPayment,
+                3000
+            );
+
+
+        /*
+         * Check immediately.
+         */
+
+        checkPayment();
+
+
+    }catch(error){
+
+        console.error(
+            error
+        );
+
+
+        showError(
+            "Unable to connect to the payment server. Please try again."
+        );
+
+
+        button.disabled =
+            false;
+
+
+        button.innerHTML =
+
+            '<i class="fa-solid fa-lock"></i> ' +
+            'Pay with M-Pesa';
+
+    }
+
+}
+
+
+/* =========================================================
+   CHECK PAYMENT
+========================================================= */
+
+async function checkPayment(){
+
+    /*
+     * Prevent excessive requests.
+     */
+
+    if(
+        paymentAttempts >=
+        MAX_ATTEMPTS
+    ){
+
+        stopPolling();
+
+
+        showPaymentTimeout();
+
+        return;
+
+    }
+
+
+    paymentAttempts++;
+
+
+    /*
+     * Update message.
+     */
+
+    document.getElementById(
+        "statusMessage"
+    ).textContent =
+
+        "Waiting for M-Pesa confirmation... " +
+
+        "(" +
+        paymentAttempts +
+        "/" +
+        MAX_ATTEMPTS +
+        ")";
+
+
+    try{
+
+
+        const response =
+            await fetch(
+                API_URL,
+                {
+
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "text/plain;charset=utf-8"
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            action:
+                                "checkPayment",
+
+                            reference:
+                                paymentReference
+
+                        })
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        /*
+         * PAYMENT SUCCESSFUL
+         */
+
+        if(
+            data.success &&
+            data.username &&
+            data.password
+        ){
+
+            stopPolling();
+
+
+            showVoucher(
+                data.username,
+                data.password
+            );
+
+
+            return;
+
+        }
+
+
+        /*
+         * PAYMENT FAILED
+         */
+
+        if(
+            data.status ===
+            "FAILED"
+        ){
+
+            stopPolling();
+
+
+            showPaymentError(
+                "The M-Pesa payment was not completed."
+            );
+
+
+            return;
+
+        }
+
+
+        /*
+         * Voucher stock problem.
+         */
+
+        if(
+            data.status ===
+            "COMPLETE_NO_VOUCHER"
+        ){
+
+            stopPolling();
+
+
+            showPaymentError(
+                data.message
+            );
+
+
+            return;
+
+        }
+
+
+    }catch(error){
+
+        console.error(
+            error
+        );
+
+        /*
+         * Do not immediately stop.
+         *
+         * Temporary network failures should not
+         * destroy a legitimate payment flow.
+         */
+
+    }
+
+}
+
+
+/* =========================================================
+   SHOW VOUCHER
+========================================================= */
+
+function showVoucher(
+    username,
+    password
+){
+
+    /*
+     * Hide payment status.
+     */
+
+    document.getElementById(
+        "statusBox"
+    ).classList.remove(
+        "active"
+    );
+
+
+    /*
+     * Insert credentials.
+     */
+
+    document.getElementById(
+        "voucherUsername"
+    ).textContent =
+        username;
+
+
+    document.getElementById(
+        "voucherPassword"
+    ).textContent =
+        password;
+
+
+    /*
+     * Show success.
+     */
+
+    document.getElementById(
+        "successBox"
+    ).classList.add(
+        "active"
+    );
+
+}
+
+
+/* =========================================================
+   PAYMENT ERROR
+========================================================= */
+
+function showPaymentError(
+    message
+){
+
+    document.getElementById(
+        "statusBox"
+    ).classList.remove(
+        "active"
+    );
+
+
+    document.getElementById(
+        "paymentForm"
+    ).style.display =
+        "block";
+
+
+    showError(
+        message
+    );
+
+
+    document.getElementById(
+        "payButton"
+    ).disabled =
+        false;
+
+
+    document.getElementById(
+        "payButton"
+    ).innerHTML =
+
+        '<i class="fa-solid fa-rotate-right"></i> ' +
+        'Try Again';
+
+}
+
+
+/* =========================================================
+   PAYMENT TIMEOUT
+========================================================= */
+
+function showPaymentTimeout(){
+
+    document.getElementById(
+        "statusBox"
+    ).classList.remove(
+        "active"
+    );
+
+
+    document.getElementById(
+        "paymentForm"
+    ).style.display =
+        "block";
+
+
+    showError(
+
+        "We have not received payment confirmation yet. If you completed the M-Pesa payment, please wait a moment and contact CoreLynk Support if your voucher does not appear."
+
+    );
+
+
+    document.getElementById(
+        "payButton"
+    ).disabled =
+        false;
+
+
+    document.getElementById(
+        "payButton"
+    ).innerHTML =
+
+        '<i class="fa-solid fa-rotate-right"></i> ' +
+        'Try Again';
+
+}
+
+
+/* =========================================================
+   STOP POLLING
+========================================================= */
+
+function stopPolling(){
+
+    if(
+        paymentTimer
+    ){
+
+        clearInterval(
+            paymentTimer
+        );
+
+        paymentTimer =
+            null;
+
+    }
+
+}
+
+
+/* =========================================================
+   COPY CREDENTIAL
+========================================================= */
+
+async function copyCredential(
+    elementId
+){
+
+    const value =
+        document.getElementById(
+            elementId
+        ).textContent;
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            value
+        );
+
+
+        /*
+         * Small visual confirmation.
+         */
+
+        showToast(
+            "Copied successfully!"
+        );
+
+
+    }catch(error){
+
+        /*
+         * Fallback for older browsers.
+         */
+
+        const textarea =
+            document.createElement(
+                "textarea"
+            );
+
+
+        textarea.value =
+            value;
+
+
+        document.body.appendChild(
+            textarea
+        );
+
+
+        textarea.select();
+
+
+        document.execCommand(
+            "copy"
+        );
+
+
+        textarea.remove();
+
+
+        showToast(
+            "Copied successfully!"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(
+    message
+){
+
+    const toast =
+        document.createElement(
+            "div"
+        );
+
+
+    toast.textContent =
+        message;
+
+
+    toast.style.position =
+        "fixed";
+
+
+    toast.style.bottom =
+        "25px";
+
+
+    toast.style.left =
+        "50%";
+
+
+    toast.style.transform =
+        "translateX(-50%)";
+
+
+    toast.style.padding =
+        "12px 18px";
+
+
+    toast.style.borderRadius =
+        "12px";
+
+
+    toast.style.background =
+        "#00d084";
+
+
+    toast.style.color =
+        "#03140e";
+
+
+    toast.style.fontWeight =
+        "800";
+
+
+    toast.style.fontSize =
+        "12px";
+
+
+    toast.style.zIndex =
+        "9999";
+
+
+    toast.style.boxShadow =
+        "0 10px 30px rgba(0,0,0,.3)";
+
+
+    document.body.appendChild(
+        toast
+    );
+
+
+    setTimeout(
+        () => {
+
+            toast.remove();
+
+        },
+        1800
+    );
+
+}
+
+
+/* =========================================================
+   CLOSE MODAL WHEN CLICKING BACKDROP
+========================================================= */
+
+document.getElementById(
+    "paymentModal"
+).addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target ===
+            this
+        ){
+
+            closePayment();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key ===
+            "Escape"
+        ){
+
+            closePayment();
+
+        }
+
+    }
+);
+
+</script>
+
+<script>
+/* =================================
+   1. Disable Right Click
+================================= */
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+/* =================================
+   2. Disable Copy / Cut / Paste
+================================= */
+["copy", "cut", "paste", "dragstart"].forEach(evt => {
+  document.addEventListener(evt, e => e.preventDefault());
+});
+
+/* =================================
+   3. Block DevTools Shortcuts
+================================= */
+document.addEventListener("keydown", function (e) {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) ||
+    (e.ctrlKey && e.key === "U")
+  ) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+/* =================================
+   4. DevTools Size Detection
+================================= */
+setInterval(() => {
+  const widthDiff  = window.outerWidth - window.innerWidth;
+  const heightDiff = window.outerHeight - window.innerHeight;
+
+  if (widthDiff > 160 || heightDiff > 160) {
+    document.body.innerHTML =
+      "<h2 style='color:red;margin-top:20%'>Access Denied</h2>";
+  }
+}, 1000);
+
+/* =================================
+   5. Console Open Detection
+================================= */
+(function () {
+  const element = new Image();
+  Object.defineProperty(element, "id", {
+    get: function () {
+      document.body.innerHTML =
+        "<h2 style='color:red;margin-top:20%'>Inspection Blocked</h2>";
+    }
+  });
+  console.log(element);
+})();
+
+/* =================================
+   6. Anti-Debugger Trap
+================================= */
+setInterval(function () {
+  debugger;
+}, 2000);
+
+/* =================================
+   7. Hide Source via Visibility Change
+================================= */
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    document.body.style.display = "none";
+  } else {
+    document.body.style.display = "block";
+  }
+});
+
+/* =================================
+   8. Disable View Source via Mouse
+================================= */
+document.onmousedown = function (e) {
+  if (e.button === 2) return false;
+};
+</script>
+
+<!--OTP Function-->      
+<script>
+  let retrievalPhone="";
+
+function openRetrieve(){
+  document.getElementById("retrieveModal").classList.add("active");
+}
+
+async function requestOTP(){
+
+  const phone=normalize(document.getElementById("retrievePhone").value);
+
+  retrievalPhone=phone;
+
+  const response=await fetch(API_URL,{
+    method:"POST",
+    headers:{
+      "Content-Type":"text/plain;charset=utf-8"
+    },
+    body:JSON.stringify({
+      action:"requestOTP",
+      phone
+    })
+  });
+
+  const data=await response.json();
+
+  if(data.success){
+
+    document.getElementById("phoneStep").style.display="none";
+    document.getElementById("otpStep").style.display="block";
+
+  }else{
+
+    document.getElementById("retrieveError").textContent=data.message;
+    document.getElementById("retrieveError").classList.add("active");
+
+  }
+
+}
+
+async function verifyOTP(){
+
+  const response=await fetch(API_URL,{
+    method:"POST",
+    headers:{
+      "Content-Type":"text/plain;charset=utf-8"
+    },
+    body:JSON.stringify({
+      action:"verifyOTP",
+      phone:retrievalPhone,
+      otp:document.getElementById("otpCode").value
+    })
+  });
+
+  const data=await response.json();
+
+  if(!data.success){
+    alert(data.message);
+    return;
+  }
+
+  document.getElementById("retrieveModal").classList.remove("active");
+
+  document.getElementById("modal").classList.add("active");
+
+  document.getElementById("paymentForm").style.display="none";
+  document.getElementById("status").classList.remove("active");
+  document.getElementById("success").classList.add("active");
+
+  document.getElementById("username").textContent=data.username;
+  document.getElementById("password").textContent=data.password;
+
+}    
+</script>
+
+      
+<!--Retrieve Wifi credentials modal-->
+<script>
+/* Close Retrieve Modal */
+
+function closeRetrieve(){
+
+  document.getElementById("retrieveModal").classList.remove("active");
+
+  document.getElementById("phoneStep").style.display="block";
+  document.getElementById("otpStep").style.display="none";
+
+  document.getElementById("retrievePhone").value="";
+  document.getElementById("otpCode").value="";
+
+  document.getElementById("retrieveError").classList.remove("active");
+
+}
+
+/* Close when clicking outside the modal */
+document.getElementById("retrieveModal").addEventListener("click",function(e){
+
+  if(e.target===this){
+    closeRetrieve();
+  }
+
+});
+
+/* Close when ESC is pressed */
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape"){
+    closeRetrieve();
+  }
+
+});
+</script>
+</body>
+</html>
