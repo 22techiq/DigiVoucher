@@ -1984,68 +1984,7 @@ Wifi credential retrieval modal
 
 
 
-<!--Option B button for Wifi Credentials retrieval[PHONE+INVOICE ID-->
-<div class="modal" id="invoiceModal">
 
-  <div class="box invoice-box">
-
-    <div class="retrieve-header">
-
-      <div class="retrieve-icon">
-        <i class="fa-solid fa-receipt"></i>
-      </div>
-
-      <div>
-        <h2>Retrieve via Invoice ID</h2>
-        <p>Use the phone number and Invoice ID from your payment SMS.</p>
-      </div>
-
-    </div>
-
-    <div id="invoiceError" class="error"></div>
-
-    <label>M-Pesa Number</label>
-
-    <input
-      id="invoicePhone"
-      class="input"
-      type="tel"
-      maxlength="12"
-      inputmode="numeric"
-      autocomplete="tel"
-      placeholder="0712345678">
-
-    <label>Invoice ID</label>
-
-    <input
-      id="invoiceID"
-      class="input"
-      maxlength="20"
-      autocomplete="off"
-      spellcheck="false"
-      placeholder="#YEX3WOP">
-
-    <button
-      id="invoiceRetrieveBtn"
-      class="pay"
-      onclick="retrieveByInvoice()">
-
-      Retrieve Credentials
-
-    </button>
-
-    <button
-      class="retrieve-cancel"
-      onclick="closeInvoiceModal()">
-
-      Cancel
-
-    </button>
-
-  </div>
-
-</div>
-<!--End of Option B button for Wifi Credentials retrieval[PHONE+INVOICE ID-->
 <!-- =========================================================
      HEADER
 ========================================================= -->
@@ -2908,6 +2847,69 @@ Wifi credential retrieval modal
 
 
 
+<!--Option B button for Wifi Credentials retrieval[PHONE+INVOICE ID-->
+<div class="modal" id="invoiceModal">
+
+  <div class="box invoice-box">
+
+    <div class="retrieve-header">
+
+      <div class="retrieve-icon">
+        <i class="fa-solid fa-receipt"></i>
+      </div>
+
+      <div>
+        <h2>Retrieve via Invoice ID</h2>
+        <p>Use the phone number and Invoice ID from your payment SMS.</p>
+      </div>
+
+    </div>
+
+    <div id="invoiceError" class="error"></div>
+
+    <label>M-Pesa Number</label>
+
+    <input
+      id="invoicePhone"
+      class="input"
+      type="tel"
+      maxlength="12"
+      inputmode="numeric"
+      autocomplete="tel"
+      placeholder="0712345678">
+
+    <label>Invoice ID</label>
+
+    <input
+      id="invoiceID"
+      class="input"
+      maxlength="20"
+      autocomplete="off"
+      spellcheck="false"
+      placeholder="#YEX3WOP">
+
+    <button
+      id="invoiceRetrieveBtn"
+      class="pay"
+      onclick="retrieveByInvoice()">
+
+      Retrieve Credentials
+
+    </button>
+
+    <button
+      class="retrieve-cancel"
+      onclick="closeInvoiceModal()">
+
+      Cancel
+
+    </button>
+
+  </div>
+
+</div>
+<!--End of Option B button for Wifi Credentials retrieval[PHONE+INVOICE ID-->
+      
 <!-- =========================================================
      FOOTER
 ========================================================= -->
