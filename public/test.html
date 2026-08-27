@@ -1598,6 +1598,347 @@ a:hover {
     }
 }
 
+
+
+/* =====================================================
+   CORELYNK — OPTION B INVOICE RETRIEVAL STYLE
+   APPEND ONLY
+===================================================== */
+
+#invoiceModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+
+  box-sizing: border-box;
+}
+
+/* Show modal */
+
+#invoiceModal.active {
+  display: flex;
+}
+
+/* Modal box */
+
+#invoiceModal .invoice-box {
+
+  width: 100%;
+  max-width: 430px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.20);
+
+  position: relative;
+
+  animation: corelynkInvoiceIn .25s ease;
+
+  box-sizing: border-box;
+}
+
+/* Entrance animation */
+
+@keyframes corelynkInvoiceIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+/* Header */
+
+#invoiceModal .retrieve-header {
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+/* Icon */
+
+#invoiceModal .retrieve-icon {
+
+  width: 50px;
+  height: 50px;
+
+  min-width: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: rgba(0, 0, 0, .07);
+
+  font-size: 21px;
+}
+
+/* Heading */
+
+#invoiceModal h2 {
+
+  margin: 0;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+}
+
+/* Description */
+
+#invoiceModal .retrieve-header p {
+
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  opacity: .68;
+}
+
+/* Labels */
+
+#invoiceModal label {
+
+  display: block;
+
+  margin: 15px 0 7px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+/* Inputs */
+
+#invoiceModal input.input {
+
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dcdcdc;
+
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  color: #222;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+/* Input focus */
+
+#invoiceModal input.input:focus {
+
+  border-color: #777;
+
+  background: #fff;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 0, 0, .07);
+}
+
+/* Invoice formatting */
+
+#invoiceModal #invoiceID {
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  font-weight: 600;
+}
+
+/* Error */
+
+#invoiceModal #invoiceError {
+
+  display: none;
+
+  margin: 0 0 12px;
+
+  padding: 11px 13px;
+
+  border-radius: 10px;
+
+  background: #fff0f0;
+
+  color: #b42318;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+#invoiceModal #invoiceError.active {
+
+  display: block;
+
+}
+
+/* Main retrieve button */
+
+#invoiceModal #invoiceRetrieveBtn {
+
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-top: 20px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease,
+    box-shadow .2s ease;
+}
+
+/* Hover */
+
+#invoiceModal #invoiceRetrieveBtn:hover {
+
+  transform: translateY(-1px);
+
+}
+
+/* Disabled */
+
+#invoiceModal #invoiceRetrieveBtn:disabled {
+
+  opacity: .65;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+}
+
+/* Cancel */
+
+#invoiceModal .retrieve-cancel {
+
+  width: 100%;
+
+  min-height: 44px;
+
+  margin-top: 9px;
+
+  border: 0;
+
+  background: transparent;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  opacity: .65;
+
+  transition: background .2s ease,
+              opacity .2s ease;
+}
+
+#invoiceModal .retrieve-cancel:hover {
+
+  background: rgba(0, 0, 0, .05);
+
+  opacity: 1;
+}
+
+/* Small helper text */
+
+#invoiceModal .invoice-help {
+
+  margin-top: 10px;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  opacity: .55;
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+  #invoiceModal {
+
+    padding: 14px;
+
+  }
+
+  #invoiceModal .invoice-box {
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+  }
+
+  #invoiceModal h2 {
+
+    font-size: 19px;
+
+  }
+
+}
 </style>
 
 </head>
