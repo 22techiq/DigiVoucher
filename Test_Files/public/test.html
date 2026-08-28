@@ -4147,32 +4147,22 @@ document.addEventListener("keydown",function(e){
 /* ===========================
  CORELYNK OPTION B
 =========================== */
+/*****************************************************
+ CORELYNK OPTION B FRONTEND (CORRECTED)
+*****************************************************/
 
 function openInvoiceModal(){
-
-  document
-    .getElementById("invoiceModal")
-    .classList.add("active");
-
+  document.getElementById("invoiceModal").classList.add("active");
 }
 
 function closeInvoiceModal(){
 
-  document
-    .getElementById("invoiceModal")
-    .classList.remove("active");
+  document.getElementById("invoiceModal").classList.remove("active");
 
-  document
-    .getElementById("invoicePhone")
-    .value="";
+  document.getElementById("invoicePhone").value="";
+  document.getElementById("invoiceID").value="";
 
-  document
-    .getElementById("invoiceID")
-    .value="";
-
-  const error=document
-    .getElementById("invoiceError");
-
+  const error=document.getElementById("invoiceError");
   error.textContent="";
   error.classList.remove("active");
 
@@ -4180,7 +4170,7 @@ function closeInvoiceModal(){
 
 function cleanInvoice(value){
 
-  return value
+  return String(value||"")
     .trim()
     .replace(/^#/,"")
     .replace(/\s+/g,"")
@@ -4191,23 +4181,11 @@ function cleanInvoice(value){
 
 async function retrieveByInvoice(){
 
-  const phone=document
-    .getElementById("invoicePhone")
-    .value.trim();
+  const phone=document.getElementById("invoicePhone").value.trim();
+  const invoice=cleanInvoice(document.getElementById("invoiceID").value);
 
-  const invoice=cleanInvoice(
-
-    document
-      .getElementById("invoiceID")
-      .value
-
-  );
-
-  const error=document
-    .getElementById("invoiceError");
-
-  const button=document
-    .getElementById("invoiceRetrieveBtn");
+  const error=document.getElementById("invoiceError");
+  const button=document.getElementById("invoiceRetrieveBtn");
 
   error.textContent="";
   error.classList.remove("active");
@@ -4245,8 +4223,10 @@ async function retrieveByInvoice(){
 
       method:"POST",
 
+      /* Important for Google Apps Script */
+
       headers:{
-        "Content-Type":"application/json"
+        "Content-Type":"text/plain;charset=utf-8"
       },
 
       body:JSON.stringify({
@@ -4261,75 +4241,93 @@ async function retrieveByInvoice(){
 
     });
 
-    const result=await response.json();
+    const text=await response.text();
+
+    let result;
+
+    try{
+
+      result=JSON.parse(text);
+
+    }catch{
+
+      throw new Error(text||"Invalid server response");
+
+    }
 
     if(!result.success){
 
-      error.textContent=result.message;
+      error.textContent=result.message||"Unable to retrieve credentials.";
       error.classList.add("active");
-
-      button.disabled=false;
-      button.textContent="Retrieve Credentials";
-
       return;
 
     }
 
-    alert(
-`CoreLynk WiFi
+    alert(`CoreLynk WiFi
 
 Package: ${result.package}
 
 Access Code: ${result.username}
 
-Password: ${result.password}`
-    );
+Password: ${result.password}`);
 
     closeInvoiceModal();
 
   }catch(e){
 
-    error.textContent="Unable to connect to the server.";
+    console.error(e);
+
+    error.textContent=e.message||"Unable to reach the server.";
     error.classList.add("active");
+
+  }finally{
+
+    button.disabled=false;
+    button.innerHTML="Retrieve Credentials";
 
   }
 
-  button.disabled=false;
-  button.textContent="Retrieve Credentials";
-
 }
 
-/* Close by clicking outside */
+/*****************************************************
+ MODAL EVENTS
+*****************************************************/
 
-document
-  .getElementById("invoiceModal")
-  .addEventListener("click",function(e){
+document.addEventListener("DOMContentLoaded",function(){
 
-    if(e.target===this){
+  const modal=document.getElementById("invoiceModal");
 
-      closeInvoiceModal();
+  if(modal){
 
-    }
+    modal.addEventListener("click",function(e){
 
-});
+      if(e.target===modal){
 
-/* Close with ESC */
+        closeInvoiceModal();
 
-document
-  .addEventListener("keydown",function(e){
+      }
 
-    if(
-      e.key==="Escape" &&
-      document
-        .getElementById("invoiceModal")
-        .classList.contains("active")
-    ){
+    });
 
-      closeInvoiceModal();
-
-    }
+  }
 
 });
- </script>     
+
+document.addEventListener("keydown",function(e){
+
+  const modal=document.getElementById("invoiceModal");
+
+  if(
+    e.key==="Escape" &&
+    modal &&
+    modal.classList.contains("active")
+  ){
+
+    closeInvoiceModal();
+
+  }
+
+});
+</script>
 </body>
 </html>
