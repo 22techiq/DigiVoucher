@@ -1604,346 +1604,157 @@ a:hover {
    CORELYNK — OPTION B INVOICE RETRIEVAL STYLE
    APPEND ONLY
 ===================================================== */
+/* ===========================
+ CORELYNK OPTION B MODAL
+=========================== */
+
+#invoiceModal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);
+  z-index:9999;
+}
+
+#invoiceModal.active{
+  display:flex;
+}
+
+.invoice-box{
+  width:100%;
+  max-width:430px;
+  padding:28px;
+  background:#0b1827;
+  border:1px solid #2f4b67;
+  border-radius:22px;
+  color:white;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  animation:invoicePop .25s ease;
+}
+
+@keyframes invoicePop{
+  from{
+    opacity:0;
+    transform:translateY(18px) scale(.97);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.invoice-box .retrieve-header{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin-bottom:22px;
+}
+
+.invoice-box .retrieve-icon{
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#00d08422;
+  border:1px solid #00d08455;
+  color:#00d084;
+  font-size:24px;
+}
+
+.invoice-box h2{
+  margin:0;
+  font-size:22px;
+}
+
+.invoice-box p{
+  margin:6px 0 0;
+  color:#b8c7d6;
+  font-size:13px;
+}
+
+.invoice-box label{
+  display:block;
+  margin:16px 0 7px;
+  font-size:13px;
+  font-weight:700;
+}
+
 .invoice-box .input{
+  width:100%;
+  height:48px;
+  padding:0 14px;
+  border-radius:12px;
+  border:1px solid #38516d;
+  background:#152434;
+  color:white;
+  box-sizing:border-box;
+  outline:none;
+}
+
+.invoice-box .input:focus{
+  border-color:#00d084;
+  box-shadow:0 0 0 3px rgba(0,208,132,.15);
+}
+
+#invoiceID{
   text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:700;
 }
 
-.invoice-box .input::placeholder{
-  text-transform:none;
+.invoice-help{
+  margin-top:8px;
+  color:#8ea2b6;
+  font-size:12px;
 }
 
-      
-#invoiceModal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px;
-
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(6px);
-
-  box-sizing: border-box;
+#invoiceError{
+  display:none;
+  margin-bottom:12px;
+  padding:10px 12px;
+  border-radius:10px;
+  background:#4b1c1c;
+  color:#ffd3d3;
+  font-size:13px;
 }
 
-/* Show modal */
-
-#invoiceModal.active {
-  display: flex;
+#invoiceError.active{
+  display:block;
 }
 
-/* Modal box */
-
-#invoiceModal .invoice-box {
-
-  width: 100%;
-  max-width: 430px;
-
-  padding: 28px;
-
-  background: #ffffff;
-
-  border-radius: 22px;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.20);
-
-  position: relative;
-
-  animation: corelynkInvoiceIn .25s ease;
-
-  box-sizing: border-box;
+#invoiceRetrieveBtn{
+  width:100%;
+  margin-top:18px;
 }
 
-/* Entrance animation */
-
-@keyframes corelynkInvoiceIn {
-
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-
+.retrieve-cancel{
+  width:100%;
+  margin-top:10px;
+  padding:13px;
+  background:transparent;
+  border:1px solid #36516a;
+  color:#b8c7d6;
+  border-radius:12px;
+  cursor:pointer;
 }
 
-/* Header */
-
-#invoiceModal .retrieve-header {
-
-  display: flex;
-  align-items: center;
-
-  gap: 14px;
-
-  margin-bottom: 22px;
+.retrieve-cancel:hover{
+  border-color:#00d084;
+  color:white;
+  background:#00d08410;
 }
 
-/* Icon */
-
-#invoiceModal .retrieve-icon {
-
-  width: 50px;
-  height: 50px;
-
-  min-width: 50px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 15px;
-
-  background: rgba(0, 0, 0, .07);
-
-  font-size: 21px;
-}
-
-/* Heading */
-
-#invoiceModal h2 {
-
-  margin: 0;
-
-  font-size: 21px;
-
-  font-weight: 800;
-
-  line-height: 1.2;
-
-}
-
-/* Description */
-
-#invoiceModal .retrieve-header p {
-
-  margin: 5px 0 0;
-
-  font-size: 13px;
-
-  line-height: 1.45;
-
-  opacity: .68;
-}
-
-/* Labels */
-
-#invoiceModal label {
-
-  display: block;
-
-  margin: 15px 0 7px;
-
-  font-size: 13px;
-
-  font-weight: 700;
-}
-
-/* Inputs */
-
-#invoiceModal input.input {
-
-  width: 100%;
-
-  height: 48px;
-
-  padding: 0 14px;
-
-  box-sizing: border-box;
-
-  border: 1px solid #dcdcdc;
-
-  border-radius: 12px;
-
-  background: #fafafa;
-
-  color: #222;
-
-  outline: none;
-
-  font-size: 14px;
-
-  transition:
-    border-color .2s ease,
-    box-shadow .2s ease,
-    background .2s ease;
-}
-
-/* Input focus */
-
-#invoiceModal input.input:focus {
-
-  border-color: #777;
-
-  background: #fff;
-
-  box-shadow:
-    0 0 0 3px rgba(0, 0, 0, .07);
-}
-
-/* Invoice formatting */
-
-#invoiceModal #invoiceID {
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
-
-  font-weight: 600;
-}
-
-/* Error */
-
-#invoiceModal #invoiceError {
-
-  display: none;
-
-  margin: 0 0 12px;
-
-  padding: 11px 13px;
-
-  border-radius: 10px;
-
-  background: #fff0f0;
-
-  color: #b42318;
-
-  font-size: 13px;
-
-  line-height: 1.4;
-}
-
-#invoiceModal #invoiceError.active {
-
-  display: block;
-
-}
-
-/* Main retrieve button */
-
-#invoiceModal #invoiceRetrieveBtn {
-
-  width: 100%;
-
-  min-height: 48px;
-
-  margin-top: 20px;
-
-  border: 0;
-
-  border-radius: 12px;
-
-  cursor: pointer;
-
-  font-size: 14px;
-
-  font-weight: 800;
-
-  transition:
-    transform .2s ease,
-    opacity .2s ease,
-    box-shadow .2s ease;
-}
-
-/* Hover */
-
-#invoiceModal #invoiceRetrieveBtn:hover {
-
-  transform: translateY(-1px);
-
-}
-
-/* Disabled */
-
-#invoiceModal #invoiceRetrieveBtn:disabled {
-
-  opacity: .65;
-
-  cursor: not-allowed;
-
-  transform: none;
-
-}
-
-/* Cancel */
-
-#invoiceModal .retrieve-cancel {
-
-  width: 100%;
-
-  min-height: 44px;
-
-  margin-top: 9px;
-
-  border: 0;
-
-  background: transparent;
-
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  opacity: .65;
-
-  transition: background .2s ease,
-              opacity .2s ease;
-}
-
-#invoiceModal .retrieve-cancel:hover {
-
-  background: rgba(0, 0, 0, .05);
-
-  opacity: 1;
-}
-
-/* Small helper text */
-
-#invoiceModal .invoice-help {
-
-  margin-top: 10px;
-
-  text-align: center;
-
-  font-size: 11px;
-
-  opacity: .55;
-
-}
-
-/* Mobile */
-
-@media (max-width: 480px) {
-
-  #invoiceModal {
-
-    padding: 14px;
-
-  }
-
-  #invoiceModal .invoice-box {
-
-    padding: 22px;
-
-    border-radius: 18px;
-
-  }
-
-  #invoiceModal h2 {
-
-    font-size: 19px;
-
+@media(max-width:480px){
+
+  .invoice-box{
+    padding:22px;
+    border-radius:18px;
   }
 
 }
@@ -1986,6 +1797,87 @@ Wifi credential retrieval modal
 /*End of Cancell button for Wifi Credentials retrieval*/
     </div>
 
+
+
+
+<!-- ===========================
+ CORELYNK OPTION B MODAL
+ Phone + Invoice ID
+=========================== -->
+
+<button class="retrieve-secondary" onclick="openInvoiceModal()">
+  <i class="fa-solid fa-receipt"></i> Use Invoice ID Instead
+</button>
+
+<div class="modal" id="invoiceModal">
+
+  <div class="box invoice-box">
+
+    <div class="retrieve-header">
+
+      <div class="retrieve-icon">
+        <i class="fa-solid fa-receipt"></i>
+      </div>
+
+      <div>
+        <h2>Retrieve via Invoice ID</h2>
+        <p>Use the phone number and Invoice ID from your payment message.</p>
+      </div>
+
+    </div>
+
+    <div id="invoiceError" class="error"></div>
+
+    <label>M-Pesa Number</label>
+
+    <input
+      id="invoicePhone"
+      class="input"
+      type="tel"
+      inputmode="numeric"
+      maxlength="12"
+      autocomplete="tel"
+      placeholder="0712345678">
+
+    <label>Invoice ID</label>
+
+    <input
+      id="invoiceID"
+      class="input"
+      maxlength="20"
+      autocomplete="off"
+      spellcheck="false"
+      placeholder="#YEX3WOP">
+
+    <p class="invoice-help">
+      Example: <strong>#YEX3WOP</strong>
+    </p>
+
+    <button
+      id="invoiceRetrieveBtn"
+      class="pay"
+      onclick="retrieveByInvoice()">
+
+      Retrieve Credentials
+
+    </button>
+
+    <button
+      class="retrieve-cancel"
+      onclick="closeInvoiceModal()">
+
+      Cancel
+
+    </button>
+
+  </div>
+
+</div>
+
+
+
+
+        
   </div>
 </div>
 
@@ -4250,9 +4142,33 @@ document.addEventListener("keydown",function(e){
  CORELYNK OPTION B FRONTEND
 *****************************************************-->
 <script>
+/* ===========================
+ CORELYNK OPTION B
+=========================== */
+/*****************************************************
+ CORELYNK OPTION B FRONTEND (CORRECTED)
+*****************************************************/
+
+function openInvoiceModal(){
+  document.getElementById("invoiceModal").classList.add("active");
+}
+
+function closeInvoiceModal(){
+
+  document.getElementById("invoiceModal").classList.remove("active");
+
+  document.getElementById("invoicePhone").value="";
+  document.getElementById("invoiceID").value="";
+
+  const error=document.getElementById("invoiceError");
+  error.textContent="";
+  error.classList.remove("active");
+
+}
+
 function cleanInvoice(value){
 
-  return value
+  return String(value||"")
     .trim()
     .replace(/^#/,"")
     .replace(/\s+/g,"")
@@ -4261,33 +4177,13 @@ function cleanInvoice(value){
 
 }
 
-function escapeHTML(text){
-
-  const div=document.createElement("div");
-  div.textContent=text;
-  return div.innerHTML;
-
-}
-
 async function retrieveByInvoice(){
 
-  const phone=document
-    .getElementById("invoicePhone")
-    .value.trim();
+  const phone=document.getElementById("invoicePhone").value.trim();
+  const invoice=cleanInvoice(document.getElementById("invoiceID").value);
 
-  const invoice=cleanInvoice(
-
-    document
-      .getElementById("invoiceID")
-      .value
-
-  );
-
-  const error=document
-    .getElementById("invoiceError");
-
-  const button=document
-    .getElementById("invoiceRetrieveBtn");
+  const error=document.getElementById("invoiceError");
+  const button=document.getElementById("invoiceRetrieveBtn");
 
   error.textContent="";
   error.classList.remove("active");
@@ -4308,15 +4204,7 @@ async function retrieveByInvoice(){
 
   }
 
-  if(invoice.length<5||invoice.length>20){
-
-    error.textContent="Invalid Invoice ID.";
-    error.classList.add("active");
-    return;
-
-  }
-
-  if(!/^[A-Z0-9]+$/.test(invoice)){
+  if(!/^[A-Z0-9]{5,20}$/.test(invoice)){
 
     error.textContent="Invalid Invoice ID.";
     error.classList.add("active");
@@ -4325,7 +4213,7 @@ async function retrieveByInvoice(){
   }
 
   button.disabled=true;
-  button.textContent="Retrieving...";
+  button.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Retrieving...';
 
   try{
 
@@ -4333,8 +4221,10 @@ async function retrieveByInvoice(){
 
       method:"POST",
 
+      /* Important for Google Apps Script */
+
       headers:{
-        "Content-Type":"application/json"
+        "Content-Type":"text/plain;charset=utf-8"
       },
 
       body:JSON.stringify({
@@ -4349,67 +4239,93 @@ async function retrieveByInvoice(){
 
     });
 
-    const result=await response.json();
+    const text=await response.text();
+
+    let result;
+
+    try{
+
+      result=JSON.parse(text);
+
+    }catch{
+
+      throw new Error(text||"Invalid server response");
+
+    }
 
     if(!result.success){
 
-      error.textContent=result.message;
+      error.textContent=result.message||"Unable to retrieve credentials.";
       error.classList.add("active");
-
-      button.disabled=false;
-      button.textContent="Retrieve Credentials";
-
       return;
 
     }
 
-    alert(
+    alert(`CoreLynk WiFi
 
-`CoreLynk WiFi
+Package: ${result.package}
 
-Package: ${escapeHTML(result.package)}
+Access Code: ${result.username}
 
-Access Code: ${escapeHTML(result.username)}
-
-Password: ${escapeHTML(result.password)}`
-
-    );
+Password: ${result.password}`);
 
     closeInvoiceModal();
 
   }catch(e){
 
-    error.textContent=
-      "Unable to connect to the server.";
+    console.error(e);
 
+    error.textContent=e.message||"Unable to reach the server.";
     error.classList.add("active");
+
+  }finally{
+
+    button.disabled=false;
+    button.innerHTML="Retrieve Credentials";
 
   }
 
-  button.disabled=false;
-  button.textContent="Retrieve Credentials";
-
 }
 
-function closeInvoiceModal(){
+/*****************************************************
+ MODAL EVENTS
+*****************************************************/
 
-  document
-    .getElementById("invoiceModal")
-    .classList.remove("active");
+document.addEventListener("DOMContentLoaded",function(){
 
-  document
-    .getElementById("invoicePhone")
-    .value="";
+  const modal=document.getElementById("invoiceModal");
 
-  document
-    .getElementById("invoiceID")
-    .value="";
+  if(modal){
 
-  document
-    .getElementById("invoiceError")
-    .classList.remove("active");
+    modal.addEventListener("click",function(e){
 
-}
- </script>     
+      if(e.target===modal){
+
+        closeInvoiceModal();
+
+      }
+
+    });
+
+  }
+
+});
+
+document.addEventListener("keydown",function(e){
+
+  const modal=document.getElementById("invoiceModal");
+
+  if(
+    e.key==="Escape" &&
+    modal &&
+    modal.classList.contains("active")
+  ){
+
+    closeInvoiceModal();
+
+  }
+
+});
+</script>   
 </body>
 </html>
